@@ -49,6 +49,11 @@ public class PaymentServiceImpl implements PaymentService{
 		return readmapper.getUserDetails(resultMaster);
 
 	}
+
+	@Override
+	public PaymentDTO getUserTrasaction(int id) {
+		return null;
+	}
 	
 	
 	

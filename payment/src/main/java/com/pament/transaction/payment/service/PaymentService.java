@@ -14,5 +14,7 @@ public interface PaymentService {
 	String updateUserPayment(PaymentDTO result);
 
 	PaymentCO getUserDetails(PaymentCO resultMaster);
+
+	PaymentDTO getUserTrasaction(int id);
 	
 }

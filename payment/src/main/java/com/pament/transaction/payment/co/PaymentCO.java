@@ -17,6 +17,7 @@ import java.util.Date;
 		private String currency ;
 		private Integer paymentAmount ;
 
+		private String purchasedReceipt;
 //		private Map<String,Object> promotionDetails;
 		private Integer paymentInitKey;
 		private Date planPurchasedOn;
@@ -128,6 +129,14 @@ import java.util.Date;
 
 		
 		
+		public String getPurchasedReceipt() {
+			return purchasedReceipt;
+		}
+
+		public void setPurchasedReceipt(String purchasedReceipt) {
+			this.purchasedReceipt = purchasedReceipt;
+		}
+
 		public Date getPlanPurchasedOn() {
 			return planPurchasedOn;
 		}

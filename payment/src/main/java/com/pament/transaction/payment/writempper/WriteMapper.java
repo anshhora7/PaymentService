@@ -16,13 +16,12 @@ public interface WriteMapper {
 
 	
 	
-	@Insert("INSERT INTO UserSubscription(userId,purchasedReceipt,status,userSubscriptionPlan,currency,paymentAmount,isUserUnsubscribedFromAutoRenewal,paymentInitKey,planPurchasedOn,originalTransactionId,transactionId,paymentType,isPromoCodeApplied,planExpiresDate,promoCode,planValidity,isFreeCodeApplied)"
-			+ "VALUES (#{userId},#{purchasedReceipt},#{status},#{userSubscriptionPlan},#{currency},#{paymentAmount},#{isUserUnsubscribedFromAutoRenewal},#{paymentInitKey},#{planPurchasedOn},#{originalTransactionId},#{transactionId},#{paymentType},#{isPromoCodeApplied},#{planExpiresDate},#{promoCode},#{planValidity},#{isFreeCodeApplied})")
+	@Insert("INSERT INTO UserSubscription(userId,status,userSubscriptionPlan,currency,paymentAmount,isUserUnsubscribedFromAutoRenewal,paymentInitKey,planPurchasedOn,originalTransactionId,transactionId,paymentType,isPromoCodeApplied,planExpiresDate,promoCode,planValidity,isFreeCodeApplied)"
+			+ "VALUES (#{userId},#{status},#{userSubscriptionPlan},#{currency},#{paymentAmount},#{isUserUnsubscribedFromAutoRenewal},#{paymentInitKey},#{planPurchasedOn},#{originalTransactionId},#{transactionId},#{paymentType},#{isPromoCodeApplied},#{planExpiresDate},#{promoCode},#{planValidity},#{isFreeCodeApplied})")
 	void saveTransactionDetails(PaymentDTO result);
 
 
-	@Update("update UserPayment SET purchasedReceipt=#{purchasedReceipt},status=#{status},transactionId=#{transactionId}, paymentAmount=#{paymentAmount},userSubscriptionPlan=#{userSubscriptionPlan},planPurchasedOn=#{planPurchasedOn},originalTransactionId=#{originalTransactionId},planExpiresDate=#{planExpiresDate},isFreeCodeApplied=#{isFreeCodeApplied},planValidity=#{planValidity} where userId=#{userId}")
+	@Update("update UserPayment SET status=#{status},transactionId=#{transactionId}, paymentAmount=#{paymentAmount},userSubscriptionPlan=#{userSubscriptionPlan},planPurchasedOn=#{planPurchasedOn},originalTransactionId=#{originalTransactionId},planExpiresDate=#{planExpiresDate},isFreeCodeApplied=#{isFreeCodeApplied},planValidity=#{planValidity} where userId=#{userId}")
 	void updateUserPayment(PaymentDTO result);
-
 
 }

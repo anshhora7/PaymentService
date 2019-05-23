@@ -1,12 +1,9 @@
-package com.pament.transaction.payment.dto;
-
+package com.PaymentTwo.restTemplate.PaymentTwo;
 
 import java.util.Date;
 
-
-
 //@Getter @Setter @AutoConfigurationPackage @NoArgsConstructor
-public class PaymentDTO {
+public class PaymentObj {
 	/*   plan=basic premium trail  */
 	
 	private static final long serialVersionUID = 1L;

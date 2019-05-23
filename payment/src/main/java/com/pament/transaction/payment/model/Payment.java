@@ -16,6 +16,7 @@ public class Payment {
 	private String currency ;
 	private Integer paymentAmount ;
 
+	private String purchasedReceipt;
 //	private Map<String,Object> promotionDetails;
 	private Integer paymentInitKey;
 	private Date planPurchasedOn;
@@ -107,6 +108,14 @@ public class Payment {
 	}
 
 	
+
+	public String getPurchasedReceipt() {
+		return purchasedReceipt;
+	}
+
+	public void setPurchasedReceipt(String purchasedReceipt) {
+		this.purchasedReceipt = purchasedReceipt;
+	}
 
 	public Integer getPaymentAmount() {
 		return paymentAmount;
